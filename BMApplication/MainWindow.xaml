@@ -1,0 +1,24 @@
+﻿<Window x:Class="BMApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
+        xmlns:local="clr-namespace:BMApplication"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Initialized="Window_Initialized">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="6*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid Grid.Column="1">
+            <m:Map x:Name="myMap" CredentialsProvider="AraBdUQ3xfs0NvYx-vZtsUpbiWTzloV-fuDAnfSCEHYZ-3qRYSmDf1lQg8UTdDuq" Mode="AerialWithLabels"  Center="50.453641,30.5251" ZoomLevel="11"/>
+        </Grid>
+        <ComboBox x:Name="ModeComboBox" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" SelectionChanged="ModeComboBox_SelectionChanged">
+            <ComboBoxItem Content="Road"/>
+            <ComboBoxItem Content="Aerial" IsSelected="True"/>
+        </ComboBox>
+    </Grid>
+</Window>
